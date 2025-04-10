@@ -1,17 +1,20 @@
 from collections import defaultdict
 from homeassistant.components.climate.const import (
+    HVACMode,
     FAN_AUTO,
     FAN_HIGH,
     FAN_LOW,
     FAN_MEDIUM,
-    HVAC_MODE_AUTO,
-    HVAC_MODE_COOL,
-    HVAC_MODE_DRY,
-    HVAC_MODE_FAN_ONLY,
-    HVAC_MODE_HEAT,
     SWING_OFF as HA_SWING_OFF,
     SWING_ON as HA_SWING_ON,
 )
+
+HVAC_MODE_AUTO = HVACMode.AUTO
+HVAC_MODE_COOL = HVACMode.COOL
+HVAC_MODE_DRY = HVACMode.DRY
+HVAC_MODE_FAN_ONLY = HVACMode.FAN_ONLY
+HVAC_MODE_HEAT = HVACMode.HEAT
+
 from .irext import MODE_AUTO, MODE_COOL, MODE_DRY, MODE_FAN, MODE_HEAT
 from .irext import SPEED_AUTO, SPEED_HIGH, SPEED_LOW, SPEED_MEDIUM
 from .irext import POWER_OFF, POWER_ON

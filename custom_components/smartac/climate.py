@@ -8,13 +8,17 @@ from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.helpers.entity import DeviceInfo
 from homeassistant.components.climate import ClimateEntity
 from homeassistant.components.climate.const import (
-    HVAC_MODE_OFF,
-    SUPPORT_TARGET_TEMPERATURE,
-    SUPPORT_FAN_MODE,
-    SUPPORT_SWING_MODE,
+    HVACMode,
+    ClimateEntityFeature,
     HVAC_MODES,
     ATTR_HVAC_MODE
 )
+
+HVAC_MODE_OFF = HVACMode.OFF
+SUPPORT_TARGET_TEMPERATURE = ClimateEntityFeature.TARGET_TEMPERATURE
+SUPPORT_FAN_MODE = ClimateEntityFeature.FAN_MODE
+SUPPORT_SWING_MODE = ClimateEntityFeature.SWING_MODE
+
 from homeassistant.const import (
     CONF_NAME,
     STATE_ON,
